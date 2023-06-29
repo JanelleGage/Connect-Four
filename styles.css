@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    background-color: rgb(152, 152, 152);
+}
+
+.grid {
+    border: 1px solid black;
+    height: 360px;
+    width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    height: 60px;
+    width: 60px;
+}
+
+.btn {
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(13, 149, 67, 0.837);
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    margin-top: 25px;
+}
+
+.player-one {
+    background-color: rgb(166, 12, 12);
+    border-radius: 30px;
+}
+
+.player-two {
+    background-color: rgb(201, 201, 5);
+    border-radius: 30px;
+}

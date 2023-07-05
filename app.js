@@ -1,6 +1,7 @@
 const squares = document.querySelectorAll('.grid div')
 const result = document.querySelector('#result')
 const displayCurrentPlayer = document.querySelector('#current-player')
+
 const winningArrays = [
     [0, 1, 2, 3],
     [41, 40, 39, 38],
@@ -107,10 +108,12 @@ function newGame() {
     for (let i = 0; i < squares.length; i++) {
         squares[i].classList.remove('player-one')
         squares[i].classList.remove('player-two')
+        squares[i].classList.remove('taken')
     }
     currentPlayer = 1
     displayCurrentPlayer.innerHTML = currentPlayer
     result.innerHTML = ""
+
     for (let i = 0; i < squares.length; i++) {
         squares[i].onclick = () => {
             //Stack the pieces
@@ -126,7 +129,10 @@ function newGame() {
                     currentPlayer = 1
                     displayCurrentPlayer.innerHTML = currentPlayer
                 }
-            } else alert("You can't put a piece there!")
+            } else {
+                alert("You can't put a piece there!")
+                console.log(squares[i].classList)
+            }
             checkBoard()
         }
     }
@@ -147,7 +153,7 @@ for (let i = 0; i < squares.length; i++) {
                 currentPlayer = 1
                 displayCurrentPlayer.innerHTML = currentPlayer
             }
-        } else alert('cant go here')
+        } else alert("You can't put a piece there!")
         checkBoard()
     }
 }

@@ -11,3 +11,6 @@ Connect Four is a two-player connection rack game.
 
 ## Video Demo
 
+https://github.com/JanelleGage/Connect-Four/assets/116291364/2dd37cdc-e728-43f2-8d69-357b4cf4f6b7
+
+
